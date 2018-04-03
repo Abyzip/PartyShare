@@ -1,0 +1,46 @@
+.w3-button.w3-display-left.w3-black {
+	margin-left: 32%;
+    top: -300px;
+    position: relative;
+	background: transparent;
+	 transform:scale(2.5);
+	 border:none;
+	 color: #767676;
+}
+
+.w3-button.w3-display-left.w3-black:focus {
+outline: none;
+}
+
+.img_slider {
+	background : url("../images/turkish_march.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 30%;
+    height: 650px;
+    margin-left: 35%;
+    margin-top: 25px;
+}
+
+.w3-button.w3-display-right.w3-black {
+	margin-left: 33%;
+    top: -300px;
+    position: relative;
+	background: transparent;
+	 transform:scale(2.5);
+	 border:none;
+	 color: #767676;
+}
+
+.w3-button.w3-display-right.w3-black:focus {
+outline: none;
+}
+
+.footer_table {
+	color: white;
+	margin: auto;
+	margin-top: 25px;
+	float: center;
+	border-right: 1px solid #555555;
+	border-left: 1px solid #555555;
+}

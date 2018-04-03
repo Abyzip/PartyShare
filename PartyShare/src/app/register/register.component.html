@@ -1,0 +1,48 @@
+<div class="form">
+  <div class="imgcontainer">
+    <div class="avatar"></div>
+  </div>
+
+  <div ng-controller="exemple" class="container">
+    <label for="uname"><b>Username</b></label>
+    <input [(ngModel)]="uname" id="uname" type="text" placeholder="Enter Username" name="uname">
+
+    <label for="psw"><b>Password</b></label>
+    <input [(ngModel)]="password" id="psw" type="password" placeholder="Enter Password" name="psw">
+	
+	<label for="email"><b>Email</b></label>
+    <input [(ngModel)]="email" id="email" type="text" placeholder="Enter Email" name="email">
+        
+    <button (click)="Register(uname, password, email)">Enregistrer</button>
+  </div>
+<!--
+  <script>
+  var myApp = angular.module('myApp', []);
+  
+  myApp.controller("exemple", function($scope){
+  $scope.username = "test";
+  
+  });
+  
+  function Connexion()
+  {
+  myApp.controller("exemple", function($scope){
+  alert($scope.username);
+  
+  });
+  
+  }
+  
+  </script>-->
+  
+  <script>
+  function Register(){
+  if(document.getElementById("uname").value != "" && document.getElementById("psw").value != "" && document.getElementById("email").value != "")
+	document.location.href="login.html";
+  }
+  </script>
+  
+  <div class="container" style="background-color:#f1f1f1">
+    <button routerLink="/login" type="button" class="cancelbtn">Retour</button>
+  </div>
+</div>

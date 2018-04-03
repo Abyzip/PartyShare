@@ -1,0 +1,81 @@
+.table_genre {
+	margin: auto;
+	margin-top: 7%;
+}
+
+.but_genre {
+	width: 200px;
+	height:200px;
+	margin: 5px;
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 10px;
+	background-color: white;
+	vertical-align: inherit;
+}
+
+.but_genre:hover {
+	background-color: #ededed;
+	animation-duration: 0.2s;
+	animation-name: but_hover_top_left;
+	-webkit-animation-fill-mode: forwards;
+	border-color: black;
+    box-shadow: 0 0 10px 0 black inset, 0 0 10px 4px black;
+	vertical-align: initial;
+}
+.but_genre:hover span {
+	text-align: center;
+}
+
+.description {
+	text-align: center;
+}
+
+.but_genre:hover table.description {
+	display:inherit;
+	position:absolute;
+	}
+
+.but_genre:hover span.titre {
+	display:none
+}
+
+.titre {
+	font-family: "Code Bold";
+}
+
+.description {
+	display:none;
+}
+
+table.description td {
+	border-bottom: 1px solid #d1d1d1;
+    width: 100%;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+table.description td:hover {
+	animation-duration: 0.5s;
+	animation-name: but_categorie_hover;
+	-webkit-animation-fill-mode: forwards;
+}
+
+table.description tr {
+	width: 190%;
+    display: block;
+    text-align: center;
+}
+
+.but_genre tbody {
+	width: 100%;
+}
+
+@keyframes but_hover_top_left {
+	from {
+	}
+	
+	to {
+		transform: scale(2,2);
+	}
+}

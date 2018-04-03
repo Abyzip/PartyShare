@@ -1,0 +1,20 @@
+<div class="form">
+  <div class="imgcontainer">
+    <div class="avatar"></div>
+  </div>
+
+  <div ng-controller="exemple" class="container">
+    <label for="uname"><b>Username</b></label>
+    <input [(ngModel)]="login" id="uname" type="text" placeholder="Enter Username">
+
+    <label for="psw"><b>Password</b></label>
+    <input [(ngModel)]="password" id="psw" type="password" placeholder="Enter Password">
+        
+    <button (click)="LogIn(login, password)">Login</button>
+  </div>
+  
+  <div class="container" style="background-color:#f1f1f1">
+    <button routerLink="/home" type="button" class="cancelbtn">Retour</button>
+    <span class="psw">Sign In <a routerLink="/register" style="color:blue">here</a></span>
+  </div>
+</div>

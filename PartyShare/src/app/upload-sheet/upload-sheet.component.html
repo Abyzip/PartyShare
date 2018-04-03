@@ -1,0 +1,77 @@
+<app-menu></app-menu>
+<div class="form">
+		  <div class="imgcontainer">
+    <div class="sheet_music"></div>
+  </div>
+
+		  <div ng-controller="exemple" class="container">
+			<input type="file" name="file" accept="application/pdf"/>
+			<br><label style="font-size: 12px"><i>*Format .pdf obligatoire</i></label><br>
+
+			<input id="sheetName" type="text" placeholder="Enter Name" name="sheetName"><br>
+			
+			<input id="author" type="text" placeholder="Enter Author Name" name="author"><br>
+			
+			<input id="description" type="text" placeholder="Enter Description" name="description">
+			
+			<br><br><label><b>Choisissez une ou plusieurs catégorie(s)</b></label><br>
+			<input type="checkbox" class="category" name="POP" value="POP">
+			<label for="POP">POP</label>
+			<input type="checkbox" class="category" name="Rock" value="Rock">
+			<label for="Rock">Rock</label>
+			<input type="checkbox" class="category" name="Classic" value="Classic">
+			<label for="Classic">Classic</label>
+			<input type="checkbox" class="category" name="Variety" value="Variety">
+			<label for="Variety">Variety</label>
+			<input type="checkbox" class="category" name="Jazz" value="Jazz">
+			<label for="Jazz">Jazz</label>
+			<input type="checkbox" class="category" name="RNB" value="RNB">
+			<label for="RNB">RNB</label>
+			
+			<br><br><label><b>Choisissez un ou plusieurs instrument(s)</b></label><br>
+			<input type="checkbox" class="Genre" name="Piano" value="Piano">
+			<label for="Piano">Piano</label>
+			<input type="checkbox" class="Genre" name="Violon" value="Violon">
+			<label for="Violon">Violon</label>
+			<input type="checkbox" class="Genre" name="Guitare" value="Guitare">
+			<label for="Guitare">Guitare</label>
+			<input type="checkbox" class="Genre" name="Chant" value="Chant">
+			<label for="Chant">Chant</label>
+			<input type="checkbox" class="Genre" name="Batterie" value="Batterie">
+			<label for="Batterie">Batterie</label>
+			<input type="checkbox" class="Genre" name="Saxophone" value="Saxophone">
+			<label for="Saxophone">Saxophone</label><br><br>
+				
+			<button onClick="Upload()">Déposer</button>
+		  </div>
+	  
+
+
+			<script>
+			function Upload(){
+			  if(document.getElementById("sheetName").value != "" && document.getElementById("author").value != "" && document.getElementById("description").value != "")
+				//Verifier si existe deja en base (GET)
+					//Uploader si possible (POST)
+			  else
+				alert('Le document n\'a pas pu être uploadé');
+			  }
+
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+			  showDivs(slideIndex += n);
+			}
+
+			function showDivs(n) {
+			  var i;
+			  var x = document.getElementsByClassName("mySlides");
+			  if (n > x.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = x.length}
+			  for (i = 0; i < x.length; i++) {
+				 x[i].style.display = "none";  
+			  }
+			  x[slideIndex-1].style.display = "block";  
+			}
+			</script>
+		</div>
